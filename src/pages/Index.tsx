@@ -33,3 +33,8 @@ const Index = () => {
       <VenueSection />
       <ContactSection />
       <Footer />
+    </main>
+  );
+};
+
+export default Index;
