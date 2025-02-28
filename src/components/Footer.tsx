@@ -1,5 +1,5 @@
 
-import { NAVIGATION_ITEMS, HACKATHON_NAME, CONTACT_INFO } from '@/lib/constants';
+import { NAVIGATION_ITEMS, HACKATHON_NAME, CONTACT_INFO, HACKATHON_LOCATION } from '@/lib/constants';
 import { ArrowUp } from 'lucide-react';
 
 const Footer = () => {
