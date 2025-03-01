@@ -24,24 +24,10 @@ const VenueSection = () => {
 
         <div 
           ref={contentRef}
-          className={`grid md:grid-cols-2 gap-8 items-center transition-all duration-700 delay-200 ${
+          className={`transition-all duration-700 delay-200 ${
             contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <div className="glass rounded-xl overflow-hidden aspect-video shadow-xl">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.981437468862!2d76.97188799999999!3d10.9598177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85bc631d629fb%3A0x34aa28bc458c1524!2sEASA%20College%20of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sin!4v1718192580793!5m2!1sen!2sin" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen 
-              loading="lazy" 
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Event location map"
-              className="w-full h-full"
-            ></iframe>
-          </div>
-
           <div className="space-y-8">
             <div className="glass rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
               <div className="flex items-start gap-4">
@@ -52,7 +38,7 @@ const VenueSection = () => {
                   <h3 className="text-xl font-bold mb-2 text-white">{HACKATHON_LOCATION}</h3>
                   <p className="text-hackathon-muted mb-4">{HACKATHON_ADDRESS}</p>
                   <a 
-                    href="https://maps.google.com/?q=EASA+College+of+Engineering+and+Technology" 
+                    href="https://maps.app.goo.gl/CYQh6zSYNVhu3b2N6" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-hackathon-primary hover:text-hackathon-primary/80 transition-colors"

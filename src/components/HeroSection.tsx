@@ -1,8 +1,7 @@
 
 import { ArrowRight } from 'lucide-react';
-import CountdownTimer from './CountdownTimer';
 import AnimatedBackground from './AnimatedBackground';
-import { HACKATHON_NAME, HACKATHON_TAGLINE, HACKATHON_DATE } from '@/lib/constants';
+import { HACKATHON_NAME, HACKATHON_TAGLINE } from '@/lib/constants';
 import { useElementOnScreen } from '@/hooks/useElementOnScreen';
 
 const HeroSection = () => {
@@ -40,9 +39,6 @@ const HeroSection = () => {
           <p className="text-lg md:text-xl text-hackathon-primary/90 font-medium">
             Join us for an exciting 3-day hackathon of innovation, collaboration, and coding!
           </p>
-          <div className="mt-8 mb-12">
-            <CountdownTimer targetDate={HACKATHON_DATE} />
-          </div>
         </div>
         
         <div 
