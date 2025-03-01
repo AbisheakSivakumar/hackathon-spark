@@ -70,8 +70,12 @@ export const TRACKS = [
 ];
 
 export const CONTACT_INFO = {
-  email: "hackastorm@eeetonline.com",
+  email: "hackastorm@ecetonline.com",
   phone: "+919842240290",
+  coordinators: [
+    { name: "M. Balaganesh", phone: "+916369133161" },
+    { name: "M. Prern Kumar", phone: "+917092740814" }
+  ],
   socialMedia: [
     { name: "Instagram", url: "https://instagram.com/hackastorm" },
     { name: "Twitter", url: "https://twitter.com/hackastorm" },

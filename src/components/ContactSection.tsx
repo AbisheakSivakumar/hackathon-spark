@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Mail, Phone, Send, AlertCircle } from 'lucide-react';
+import { Mail, Phone, Send, AlertCircle, User } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { CONTACT_INFO } from '@/lib/constants';
 import { useElementOnScreen } from '@/hooks/useElementOnScreen';
@@ -239,6 +239,29 @@ const ContactSection = () => {
                       </a>
                     </div>
                   </div>
+                </div>
+              </div>
+              
+              <div className="glass rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+                <h3 className="text-xl font-bold mb-6 text-white">Student Coordinators</h3>
+                
+                <div className="space-y-4">
+                  {CONTACT_INFO.coordinators?.map((coordinator, index) => (
+                    <div key={index} className="flex items-start gap-4">
+                      <div className="p-3 rounded-full bg-hackathon-primary/10 text-hackathon-primary">
+                        <User className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <p className="text-sm text-hackathon-muted mb-1">{coordinator.name}</p>
+                        <a 
+                          href={`tel:${coordinator.phone}`}
+                          className="text-hackathon-light hover:text-hackathon-primary transition-colors"
+                        >
+                          {coordinator.phone}
+                        </a>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
               
