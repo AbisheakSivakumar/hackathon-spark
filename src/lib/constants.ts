@@ -1,4 +1,3 @@
-
 import { Calendar, Trophy, MapPin, User, Users, Clock } from "lucide-react";
 
 export const HACKATHON_NAME = "Hackastorm 2K25";
@@ -78,7 +77,7 @@ export const CONTACT_INFO = {
   ],
   socialMedia: [
     { name: "Instagram", url: "https://instagram.com/hackastorm" },
-    { name: "Twitter", url: "https://twitter.com/hackastorm" },
+    { name: "X", url: "https://twitter.com/hackastorm" },
     { name: "LinkedIn", url: "https://linkedin.com/company/hackastorm" },
     { name: "Facebook", url: "https://facebook.com/hackastorm" },
   ]
