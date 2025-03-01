@@ -1,37 +1,11 @@
 
-import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useElementOnScreen } from '@/hooks/useElementOnScreen';
-
-const images = [
-  '/placeholder.svg',
-  '/placeholder.svg',
-  '/placeholder.svg',
-  '/placeholder.svg',
-  '/placeholder.svg'
-];
+import { REGISTRATION_FEE } from '@/lib/constants';
 
 const AboutSection = () => {
-  const [currentImage, setCurrentImage] = useState(0);
   const [titleRef, titleVisible] = useElementOnScreen({ threshold: 0.2, once: true });
   const [textRef, textVisible] = useElementOnScreen({ threshold: 0.2, once: true });
-  const [carouselRef, carouselVisible] = useElementOnScreen({ threshold: 0.2, once: true });
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-    }, 5000);
-    
-    return () => clearInterval(interval);
-  }, []);
-
-  const prevImage = () => {
-    setCurrentImage((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  };
-
-  const nextImage = () => {
-    setCurrentImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  };
+  const [imageRef, imageVisible] = useElementOnScreen({ threshold: 0.2, once: true });
 
   return (
     <section id="about" className="relative py-20 bg-hackathon-dark">
@@ -42,7 +16,7 @@ const AboutSection = () => {
             titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h2 className="section-heading">About TechSpark</h2>
+          <h2 className="section-heading">About Hackastorm</h2>
           <p className="subtitle">
             Join us for an unforgettable weekend of innovation, collaboration, and technology
           </p>
@@ -57,13 +31,16 @@ const AboutSection = () => {
           >
             <div className="space-y-6 text-hackathon-light/90">
               <p>
-                TechSpark 2024 is the premier collegiate hackathon that brings together the brightest minds from universities across the nation. Over three intensive days, participants will collaborate, innovate, and create technological solutions to real-world problems.
+                Hackastorm 2K25 is the premier collegiate hackathon hosted by EASA College of Engineering & Technology (ECET). Over <span className="text-hackathon-primary font-semibold">three intensive days</span>, participants will collaborate, innovate, and create technological solutions to real-world problems.
               </p>
               <p>
-                Whether you're a coding expert, a design enthusiast, or someone with great ideas, TechSpark welcomes all skill levels and backgrounds. Our hackathon provides a supportive environment where you can learn new skills, network with industry professionals, and push the boundaries of what's possible.
+                Whether you're a coding expert, a design enthusiast, or someone with great ideas, Hackastorm welcomes all skill levels and backgrounds. Our hackathon provides a supportive environment where you can learn new skills, network with industry professionals, and push the boundaries of what's possible.
               </p>
               <p>
-                With mentorship from industry experts, workshops on cutting-edge technologies, and opportunities to connect with potential employers, TechSpark is more than just a competition—it's a launchpad for your career in technology.
+                With mentorship from industry experts, workshops on cutting-edge technologies, and opportunities to connect with potential employers, Hackastorm is more than just a competition—it's a launchpad for your career in technology.
+              </p>
+              <p className="text-hackathon-primary font-medium mt-6">
+                Registration fee: {REGISTRATION_FEE}
               </p>
               
               <div className="pt-4">
@@ -75,58 +52,29 @@ const AboutSection = () => {
           </div>
           
           <div 
-            ref={carouselRef}
+            ref={imageRef}
             className={`transition-all duration-700 delay-400 ${
-              carouselVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              imageVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
             <div className="relative glass rounded-xl overflow-hidden aspect-video">
-              <div className="absolute inset-0 flex">
-                {images.map((src, index) => (
-                  <div
-                    key={index}
-                    className={`absolute inset-0 transition-opacity duration-1000 ${
-                      index === currentImage ? 'opacity-100' : 'opacity-0'
-                    }`}
-                  >
-                    <img
-                      src={src}
-                      alt={`Hackathon event photo ${index + 1}`}
-                      className="w-full h-full object-cover"
-                    />
+              <img
+                src="/placeholder.svg"
+                alt="Hackathon participants collaborating"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-hackathon-darker/80 to-transparent flex items-end">
+                <div className="p-6">
+                  <div className="flex gap-2 mb-3">
+                    {[1, 2, 3].map(day => (
+                      <div key={day} className="px-4 py-2 bg-hackathon-primary/20 backdrop-blur-sm rounded-lg">
+                        <span className="text-hackathon-primary font-semibold">Day {day}</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-              
-              <button
-                onClick={prevImage}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 glass rounded-full p-2 transition-all hover:bg-white/20"
-                aria-label="Previous image"
-              >
-                <ChevronLeft className="h-6 w-6 text-white" />
-              </button>
-              
-              <button
-                onClick={nextImage}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 glass rounded-full p-2 transition-all hover:bg-white/20"
-                aria-label="Next image"
-              >
-                <ChevronRight className="h-6 w-6 text-white" />
-              </button>
-              
-              <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-                {images.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentImage(index)}
-                    className={`w-2 h-2 rounded-full transition-all ${
-                      index === currentImage 
-                        ? 'bg-hackathon-primary w-6' 
-                        : 'bg-white/50 hover:bg-white/70'
-                    }`}
-                    aria-label={`Go to image ${index + 1}`}
-                  />
-                ))}
+                  <h3 className="text-xl font-bold text-white">Three Days of Intense Innovation</h3>
+                  <p className="text-hackathon-light/80 mt-2">Coding, Workshops, Networking & Fun</p>
+                </div>
               </div>
             </div>
           </div>

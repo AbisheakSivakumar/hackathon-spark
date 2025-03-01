@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { NAVIGATION_ITEMS, HACKATHON_NAME } from '@/lib/constants';
+import { NAVIGATION_ITEMS } from '@/lib/constants';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,8 +37,8 @@ const Navbar = () => {
           className="text-xl md:text-2xl font-bold text-white flex items-center gap-2 relative z-50"
           aria-label="Home"
         >
-          <span className="text-hackathon-primary">Tech</span>
-          <span>Spark</span>
+          <span className="text-hackathon-primary">Hacka</span>
+          <span>storm</span>
         </a>
 
         {/* Desktop Navigation */}

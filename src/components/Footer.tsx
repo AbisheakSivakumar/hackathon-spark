@@ -16,11 +16,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <h3 className="text-xl font-bold mb-6 text-white flex items-center gap-2">
-              <span className="text-hackathon-primary">Tech</span>
-              <span>Spark</span>
+              <span className="text-hackathon-primary">Hacka</span>
+              <span>storm</span>
             </h3>
             <p className="text-hackathon-muted mb-6">
-              Join us for an unforgettable weekend of innovation, collaboration, and technology at MIT Campus.
+              Join us for an unforgettable weekend of innovation, collaboration, and technology at EASA College of Engineering & Technology.
             </p>
             <div className="flex space-x-4">
               {CONTACT_INFO.socialMedia.map((social, index) => (
@@ -93,7 +93,7 @@ const Footer = () => {
         
         <div className="pt-8 mt-8 border-t border-hackathon-primary/10 flex flex-col md:flex-row justify-between items-center">
           <p className="text-hackathon-muted text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} {HACKATHON_NAME}. All rights reserved.
+            &copy; 2025 EASA College of Engineering & Technology (ECET). All rights reserved.
           </p>
           
           <button

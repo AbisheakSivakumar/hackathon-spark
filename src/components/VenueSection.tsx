@@ -18,7 +18,7 @@ const VenueSection = () => {
         >
           <h2 className="section-heading">Event Venue</h2>
           <p className="subtitle">
-            Join us at our state-of-the-art innovation center
+            Join us at EASA College of Engineering & Technology
           </p>
         </div>
 
@@ -30,7 +30,7 @@ const VenueSection = () => {
         >
           <div className="glass rounded-xl overflow-hidden aspect-video shadow-xl">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.1848285365703!2d-71.09170304872254!3d42.360528879077566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e370a5cb30cc5f%3A0xc53a8e6489686c87!2sMassachusetts%20Institute%20of%20Technology!5e0!3m2!1sen!2sus!4v1654302745003!5m2!1sen!2sus" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.9848293256024!2d76.96890491206598!3d10.95971264560553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85bc631d629fb%3A0x34aa28bc458c1524!2sEASA%20College%20of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sin!4v1708929612275!5m2!1sen!2sin" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
@@ -52,7 +52,7 @@ const VenueSection = () => {
                   <h3 className="text-xl font-bold mb-2 text-white">{HACKATHON_LOCATION}</h3>
                   <p className="text-hackathon-muted mb-4">{HACKATHON_ADDRESS}</p>
                   <a 
-                    href="https://maps.google.com/?q=MIT+Campus" 
+                    href="https://maps.google.com/?q=EASA+College+of+Engineering+and+Technology" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-hackathon-primary hover:text-hackathon-primary/80 transition-colors"
@@ -65,7 +65,10 @@ const VenueSection = () => {
             </div>
 
             <div className="glass rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-              <h3 className="text-xl font-bold mb-4 text-white">Facilities Available</h3>
+              <h3 className="text-xl font-bold mb-4 text-white">About the Venue</h3>
+              <p className="text-hackathon-muted mb-4">
+                EASA College of Engineering & Technology (ECET) is an autonomous institution providing state-of-the-art facilities for events and technical activities. The campus offers a perfect environment for innovation and collaboration.
+              </p>
               <ul className="space-y-3 text-hackathon-muted">
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-hackathon-primary"></span>
@@ -77,19 +80,11 @@ const VenueSection = () => {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-hackathon-primary"></span>
-                  Resting areas with comfortable seating
+                  Modern labs and auditoriums
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-hackathon-primary"></span>
-                  Complimentary meals and snacks
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-hackathon-primary"></span>
-                  Technical support and hardware lending
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-hackathon-primary"></span>
-                  Meeting rooms for team discussions
+                  Complimentary meals and refreshments
                 </li>
               </ul>
             </div>

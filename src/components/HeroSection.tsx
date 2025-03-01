@@ -24,19 +24,21 @@ const HeroSection = () => {
           }`}
         >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-4 tracking-tight">
-            <span className="text-hackathon-primary">{HACKATHON_NAME.split(' ')[0]}</span>
-            <span className="text-white"> {HACKATHON_NAME.split(' ')[1]}</span>
+            <span className="text-hackathon-primary">{HACKATHON_NAME}</span>
           </h1>
         </div>
         
         <div 
           ref={taglineRef}
-          className={`max-w-2xl mx-auto mb-8 transition-all duration-700 delay-300 ${
+          className={`max-w-3xl mx-auto mb-8 transition-all duration-700 delay-300 ${
             taglineVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <p className="text-xl md:text-2xl text-hackathon-light/90 font-light">
+          <p className="text-xl md:text-2xl text-hackathon-light/90 font-light mb-3">
             {HACKATHON_TAGLINE}
+          </p>
+          <p className="text-lg md:text-xl text-hackathon-primary/90 font-medium">
+            Join us for an exciting 3-day hackathon of innovation, collaboration, and coding!
           </p>
           <div className="mt-8 mb-12">
             <CountdownTimer targetDate={HACKATHON_DATE} />
