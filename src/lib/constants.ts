@@ -110,3 +110,154 @@ export const FAQ_ITEMS = [
     answer: "No, you don't need to have an idea before registering. You can brainstorm with your team during the event, and we'll also provide some challenge statements to inspire you."
   }
 ];
+
+export const SCHEDULE_ITEMS = [
+  {
+    day: "Day 1",
+    date: "March 15, 2025",
+    events: [
+      {
+        time: "09:00 AM",
+        title: "Registration & Check-in",
+        description: "Participants arrive, register, and set up their workstations."
+      },
+      {
+        time: "10:00 AM",
+        title: "Opening Ceremony",
+        description: "Welcome address, introduction to judges, mentors, and sponsors."
+      },
+      {
+        time: "11:00 AM",
+        title: "Hackathon Kickoff",
+        description: "Announcement of problem statements and rules."
+      },
+      {
+        time: "12:00 PM",
+        title: "Lunch Break",
+        description: "Networking opportunity with fellow participants and mentors."
+      },
+      {
+        time: "01:00 PM",
+        title: "Hacking Begins",
+        description: "Teams start working on their projects."
+      },
+      {
+        time: "04:00 PM",
+        title: "Mentor Sessions",
+        description: "Mentors available for technical guidance and feedback."
+      },
+      {
+        time: "08:00 PM",
+        title: "Dinner",
+        description: "Refuel and refresh."
+      },
+      {
+        time: "09:00 PM",
+        title: "Hacking Continues",
+        description: "Teams continue working through the night."
+      }
+    ]
+  },
+  {
+    day: "Day 2",
+    date: "March 16, 2025",
+    events: [
+      {
+        time: "08:00 AM",
+        title: "Breakfast",
+        description: "Morning fuel to kickstart the day."
+      },
+      {
+        time: "09:00 AM",
+        title: "Hacking Continues",
+        description: "Teams resume work on their projects."
+      },
+      {
+        time: "11:00 AM",
+        title: "Workshop Session",
+        description: "Interactive workshop on emerging technologies."
+      },
+      {
+        time: "01:00 PM",
+        title: "Lunch Break",
+        description: "Time to recharge and network."
+      },
+      {
+        time: "02:00 PM",
+        title: "Mid-way Checkpoint",
+        description: "Teams share progress and receive feedback."
+      },
+      {
+        time: "03:00 PM",
+        title: "Hacking Continues",
+        description: "Teams continue development with renewed focus."
+      },
+      {
+        time: "08:00 PM",
+        title: "Dinner",
+        description: "Evening meal and networking."
+      },
+      {
+        time: "09:00 PM",
+        title: "Gaming Break",
+        description: "Fun activities to refresh minds."
+      },
+      {
+        time: "10:00 PM",
+        title: "Hacking Continues",
+        description: "Final push through the night."
+      }
+    ]
+  },
+  {
+    day: "Day 3",
+    date: "March 17, 2025",
+    events: [
+      {
+        time: "08:00 AM",
+        title: "Breakfast",
+        description: "Final day kickoff."
+      },
+      {
+        time: "09:00 AM",
+        title: "Last Minute Hacking",
+        description: "Teams finalize their projects."
+      },
+      {
+        time: "12:00 PM",
+        title: "Hacking Ends",
+        description: "All code submissions due."
+      },
+      {
+        time: "12:30 PM",
+        title: "Lunch",
+        description: "Pre-presentation meal."
+      },
+      {
+        time: "02:00 PM",
+        title: "Project Presentations",
+        description: "Teams present their solutions to judges and audience."
+      },
+      {
+        time: "05:00 PM",
+        title: "Judging Deliberation",
+        description: "Judges evaluate projects based on innovation, technical complexity, design, and potential impact."
+      },
+      {
+        time: "06:00 PM",
+        title: "Awards Ceremony",
+        description: "Announcement of winners and prize distribution."
+      },
+      {
+        time: "07:00 PM",
+        title: "Closing Ceremony",
+        description: "Farewell address, acknowledgments, and networking."
+      },
+      {
+        time: "08:00 PM",
+        title: "Event Concludes",
+        description: "End of Hackastorm 2K25."
+      }
+    ]
+  }
+];
