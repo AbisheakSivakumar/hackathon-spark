@@ -43,7 +43,7 @@ const PrizesSection = () => {
 
         <div
           ref={cardsRef}
-          className={`transition-all duration-700 delay-200 ${
+          className={`transition-all duration-700 delay-200 mt-12 ${
             cardsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
@@ -52,11 +52,6 @@ const PrizesSection = () => {
               <div 
                 key={index}
                 className="glass rounded-xl overflow-hidden group transition-all duration-300 hover:bg-white/10 hover:scale-[1.02]"
-                style={{ 
-                  animationDelay: `${index * 100}ms`,
-                  animation: cardsVisible ? 'fade-in-up 0.5s forwards' : 'none',
-                  opacity: 0
-                }}
               >
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-4">
